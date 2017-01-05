@@ -1,0 +1,75 @@
+---
+layout: post
+status: publish
+published: true
+title: Soporte TRIM en Mac OS
+author:
+  display_name: lordudun
+  login: oriol
+  email: oriol@lordudun.es
+  url: http://lordudun.es
+author_login: oriol
+author_email: oriol@lordudun.es
+author_url: http://lordudun.es
+excerpt: |-
+  <a href="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/images.jpg"><img class="size-medium wp-image-188 alignnone" title="NAND Samdung" src="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/images-300x146.jpg" alt="" width="300" height="146" /></a>
+
+  Retomo de nuevo el tema de los discos SSD, en este caso me centrare en  el soporte de este tipo de discos en Mac OS X Snow Leopard. Como vimos hace unos dias en el post <a title="Disco SSD en MacBook Pro" href="http://blog.lordudun.es/2011/04/disco-ssd-en-macbook-pro/">Disco SSD en MacBook Pro</a>, <strong>Mac OS X Snow Leopard no soporta TRIM</strong>.
+
+  La realidad es un poco mas compleja de lo que parece:
+
+  - <strong>Oficialmente Mac OS no soporta TRIM</strong>, lo hara en la proxima versión: Lion
+
+  - <strong>Equipos Apple</strong> con discos SSD con <strong>soporte TRIM</strong> en Mac OS X Snow Leopard
+
+  - <strong>Activar extraoficialmente</strong> soporte TRIM para todos los discos SDD
+
+  - ¿MacBook Air sin soporte TRIM?
+
+  Pasemos a ver en detalle cada uno de los puntos comentados.
+wordpress_id: 167
+wordpress_url: http://blog.lordudun.es/?p=167
+date: '2011-04-29 17:12:57 +0200'
+date_gmt: '2011-04-29 15:12:57 +0200'
+categories:
+- Mac
+tags:
+- mac
+- SSD
+- TRIM
+comments:
+- id: 12
+  author: comparador de precios
+  author_email: alpha_one_x86@first-world.info
+  author_url: http://www.calle-hardware.com/
+  date: '2011-11-08 11:53:41 +0100'
+  date_gmt: '2011-11-08 10:53:41 +0100'
+  content: Que complicado
+---
+<p><a href="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/images.jpg"><img class="size-medium wp-image-188 alignnone" title="NAND Samdung" src="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/images-300x146.jpg" alt="" width="300" height="146" /></a></p>
+<p>Retomo de nuevo el tema de los discos SSD, en este caso me centrare en  el soporte de este tipo de discos en Mac OS X Snow Leopard. Como vimos hace unos dias en el post <a title="Disco SSD en MacBook Pro" href="http://blog.lordudun.es/2011/04/disco-ssd-en-macbook-pro/">Disco SSD en MacBook Pro</a>, <strong>Mac OS X Snow Leopard no soporta TRIM</strong>.</p>
+<p>La realidad es un poco mas compleja de lo que parece:</p>
+<p>- <strong>Oficialmente Mac OS no soporta TRIM</strong>, lo hara en la proxima versión: Lion</p>
+<p>- <strong>Equipos Apple</strong> con discos SSD con <strong>soporte TRIM</strong> en Mac OS X Snow Leopard</p>
+<p>- <strong>Activar extraoficialmente</strong> soporte TRIM para todos los discos SDD</p>
+<p>- ¿MacBook Air sin soporte TRIM?</p>
+<p>Pasemos a ver en detalle cada uno de los puntos comentados.<a id="more"></a><a id="more-167"></a></p>
+<h2>Sobre TRIM</h2>
+<p>Antes de nada, recordemos un poco que es eso del TRIM. TRIM es una orden que permite al sistema operativo<strong> informar a los discos SSD</strong> (Solid State Disc) que <strong>bloques de memoria ya no estan en uso</strong>, es decir, aquellos que contenían ficheros que han sido borrados.</p>
+<p>La operacion TRIM pretende gestionar de una forma especifica, metodo de garbage collection, el borrado de los datos del disco duro. El fin es <strong>mantener el rendimiento</strong> de los discos SSD durante toda su vida util. El metodo tradicional de borrado, usado en discos magneticos, favorece la <strong>degradación de los discos SDD</strong>. Por construccion son muy diferentes.</p>
+<p>Por un lado el problema reside en la forma que el Sistema Operativo borra los <strong>bloques de memoria</strong>, tipicamente de un tamaño de 4K, mucho <strong>menor</strong> al tamaño mínimo a borrar en las memorias NAND de una SSD.</p>
+<p><a href="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/Toshiba_64GB_NAND.jpg"><img class="size-full wp-image-192 alignnone" title="Toshiba 64GB NAND" src="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/Toshiba_64GB_NAND.jpg" alt="" width="210" height="148" /></a></p>
+<p>Por otro lado los discos magneticos no diferencian entre una escritura o una sobre-escritura de un bloque marcado como eliminado por el Sistema Operativo. En cambio en un disco SSD esto no es así, ya que la <strong>sobre-escritura genera un overhead</strong> comparado con la escritura en una pagina vacia.</p>
+<p>Finalmente hay que tener presente que las <strong>celdas de memoria</strong> NAND tienen un <strong>numero limitado de escrituras</strong>, unos 10.000 ciclos de escritura/borrado.</p>
+<h2>Soporte TRIM en Mac OS</h2>
+<p>Es bastante conocido que Mac OS X Snow Leopard presenta algunos <strong>inconvenientes con los discos de estado solido</strong>, curiosamente Apple ha sido uno de los primero fabricantes en vender equipos con discos SSD.</p>
+<p>Por un lado, es de dominio publico que <strong>Mac OS no soportara TRIM</strong> hasta su proxima version, Mac OS X Lion. Desde Apple se ha asegurado que los <strong>discos SSD</strong> comprados con equipos<strong> de Apple tendran soporte TRIM</strong> en Mac OS por defecto.</p>
+<p>Por otro lado, se han reportado algunos problemas en equipos con discos SSD de terceros relacionados con la funcion de hibernar.</p>
+<p>La guinda del pastel la encontramos con la posibilidad de <strong>activar TRIM en Mac OS para cualquier tipo de disco SSD</strong>. A continuacion ss dejo un link de como hacerlo:</p>
+<p><a href="http://blog.lordudun.es/2011/04/activar-soporte-trim-en-mac-os/">Activar soporte TRIM en Mac OS para cualquier disco SDDs</a></p>
+<p><a href="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/photo_lamaquinista.jpg"><img class="size-medium wp-image-184 alignnone" title="Apple Store - La Maquinista" src="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/photo_lamaquinista-300x233.jpg" alt="" width="270" height="210" /></a></p>
+<p>Lo mas sorprendente de todo este caso es que en una reciente vista a la <a href="http://www.apple.com/es/retail/lamaquinista/">Apple Store del centro comercial de La Maquinista</a> puede comprobar que los MacBook Air, tanto de 11 como de 13 pulgadas,<strong> no tenian activado el soporte TRIM</strong> en sus discos SSD.</p>
+<p>Podeis encontrar mas información en:</p>
+<p><a href="http://es.wikipedia.org/wiki/TRIM">Wikipedia: TRIM</a></p>
+<p><a href="http://todoappleblog.com/hardware/activa-el-trim-en-mac-os-x-con-cualquier-disco-ssd/">Activa el TRIM en Mac OS X con cualquier disco SSD</a></p>
+<p><a href="http://www.faq-mac.com/42386/activar-soporte-trim-mac-os-x-1067-discos-ssd-apple">Como activar el soporte TRIM en Mac OS X 10.6.7 y discos SSD de Apple</a></p>

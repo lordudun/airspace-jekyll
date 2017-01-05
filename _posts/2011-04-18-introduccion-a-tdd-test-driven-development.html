@@ -1,0 +1,116 @@
+---
+layout: post
+status: publish
+published: true
+title: Introduccion a TDD (Test Driven Development)
+author:
+  display_name: lordudun
+  login: oriol
+  email: oriol@lordudun.es
+  url: http://lordudun.es
+author_login: oriol
+author_email: oriol@lordudun.es
+author_url: http://lordudun.es
+excerpt: |+
+  <strong>TDD</strong> son las siglas de <a href="http://en.wikipedia.org/wiki/Test-driven_development"><strong>Test Driver Development</strong></a> un proceso de desarrollo de software que se basa en la idea de desarrollar <strong>pruebas</strong>, <strong>codificar</strong> y <strong>refactorizar</strong> el codigo construido.
+
+  El procedimiento que hay que seguir para desarrollar aplicando TDD, Test Driver Development, es muy sencillo, a continuacion veremos como usar esta metodologia, o procedimiento de desarrollo, muy comun entre los seguidores de las <strong>metodologias agiles</strong>.
+
+  TDD se basa en la idea de realizar <a href="http://en.wikipedia.org/wiki/Unit_testing"><strong>pruebas unitarias</strong></a> para el codigo que debemos construir. A diferencia del procedimiento que usamos habitualmente, construir el codigo y despues realizar las pruebas unitarias, TDD establece que <strong>primero</strong> hay que <strong>realizar una prueba</strong> y a continuación <strong>desarrollar el codigo que la resuelve</strong>.
+
+  Obviamente el metodo TDD no acaba aqui, ya que ademas añade el <a href="http://en.wikipedia.org/wiki/Code_refactoring"><strong>code refactoring</strong></a>, re-estructuracion del codigo implementado, un factor importante que no debemos olvidar.
+
+wordpress_id: 126
+wordpress_url: http://blog.lordudun.es/?p=126
+date: '2011-04-18 14:30:19 +0200'
+date_gmt: '2011-04-18 12:30:19 +0200'
+categories:
+- Agile
+tags:
+- Agil
+- Agile
+- TDD
+comments:
+- id: 6
+  author: 'Seminario de Junio: TDD + Katayunos. Desarrollar software nunca ha sido
+    tan nutritivo | Seminarios · theEvnt'
+  author_email: ''
+  author_url: http://seminarios.theevnt.com/2011/06/10/seminario-de-junio-tdd-katayunos-desarrollar-software-nunca-ha-sido-tan-nutritivo/
+  date: '2011-06-10 13:10:10 +0200'
+  date_gmt: '2011-06-10 11:10:10 +0200'
+  content: "[...] buenas. Para remediarlo ha surgido una iniciativa que pretende unir
+    lo mejor de ambos mundos: el TDD (Desarrollo Dirigido por Test) del software y
+    el desayuno del día a día tan importante e [...]"
+- id: 7
+  author: Rodolfo
+  author_email: rodolfoag83@gmail.com
+  author_url: ''
+  date: '2012-03-02 14:58:00 +0100'
+  date_gmt: '2012-03-02 13:58:00 +0100'
+  content: Muy clara tu explicación, gracias!!
+- id: 8
+  author: Aldo
+  author_email: aldobravo24@gmail.com
+  author_url: ''
+  date: '2013-02-21 13:14:03 +0100'
+  date_gmt: '2013-02-21 12:14:03 +0100'
+  content: Estupenda introducción, gracias!  Ahora pensando en alternativas para ponerlo
+    en práctica.. os recomiendo echar un vistazo a esto <a href="http://www.cocoaosx.com/cursos/curso-test-driven-development-tdd-para-ios/"
+    rel="nofollow">TDD</a> slds
+- id: 9
+  author: Jonathan Ascencio
+  author_email: xjonathanhac@gmail.com
+  author_url: ''
+  date: '2014-03-28 16:12:44 +0100'
+  date_gmt: '2014-03-28 15:12:44 +0100'
+  content: Super claro.
+- id: 10
+  author: Fran
+  author_email: srlk_doblev@hotmail.com
+  author_url: ''
+  date: '2014-08-29 17:53:42 +0200'
+  date_gmt: '2014-08-29 15:53:42 +0200'
+  content: "Ojala el profesor que he tenido y me ha explicado esto, me lo hubiera
+    explicado de una manera clara y sencilla como lo haces aquí. Me ha sido de gran
+    ayuda este post, muchas gracias! \nUn saludo!"
+- id: 11
+  author: Luis
+  author_email: luismalamoc@yahoo.com
+  author_url: ''
+  date: '2014-10-14 22:23:40 +0200'
+  date_gmt: '2014-10-14 20:23:40 +0200'
+  content: Excelente tu explicación, sería genial una explicación en código, sin embargo,
+    gracias por compartir conocimientos.
+---
+<p><strong>TDD</strong> son las siglas de <a href="http://en.wikipedia.org/wiki/Test-driven_development"><strong>Test Driver Development</strong></a> un proceso de desarrollo de software que se basa en la idea de desarrollar <strong>pruebas</strong>, <strong>codificar</strong> y <strong>refactorizar</strong> el codigo construido.</p>
+<p>El procedimiento que hay que seguir para desarrollar aplicando TDD, Test Driver Development, es muy sencillo, a continuacion veremos como usar esta metodologia, o procedimiento de desarrollo, muy comun entre los seguidores de las <strong>metodologias agiles</strong>.</p>
+<p>TDD se basa en la idea de realizar <a href="http://en.wikipedia.org/wiki/Unit_testing"><strong>pruebas unitarias</strong></a> para el codigo que debemos construir. A diferencia del procedimiento que usamos habitualmente, construir el codigo y despues realizar las pruebas unitarias, TDD establece que <strong>primero</strong> hay que <strong>realizar una prueba</strong> y a continuación <strong>desarrollar el codigo que la resuelve</strong>.</p>
+<p>Obviamente el metodo TDD no acaba aqui, ya que ademas añade el <a href="http://en.wikipedia.org/wiki/Code_refactoring"><strong>code refactoring</strong></a>, re-estructuracion del codigo implementado, un factor importante que no debemos olvidar.</p>
+<p><a id="more"></a><a id="more-126"></a></p>
+<h2><strong>Como afrontar TDD</strong></h2>
+<p>El metodo a seguir es sencillo. Consiste en elegir uno de los requisitos a implementar, buscar un primer ejemplo sencillo del requisito, crear una prueba unitaria, ejecutar la prueba, implementar el codigo minimo para superar la prueba y ejecutar de nuevo la prueba para ver que se supera.</p>
+<p>Obviamente la gracia de ejecutar la prueba despues de crearla es ver que esta falla y que sera necesario hacer algo en el codigo para que esta pase.</p>
+<p>A continuacion solo es necesario volver a aplicar el proceso descrito anteriormente hasta haber resuelto la funcionalidad o funcionalidades que se debian implementar.</p>
+<p>A demas una vez pasada la prueba es necesario revisar el codigo, por si requiere refactoring. Si es el caso, se revisara, corregira y se ejecutaran las pruebas unitarias, de nuevo.</p>
+<p>Es importante tener presente que solo se crea un test por iteracion y solo se implementa el codigo minimo necesario para resolver ese caso. No es bueno "emocionarse" implementando y desarrollar mas de lo necesario para resolver el caso de prueba. Si nos vamos por las ramas desarrollando mas casos perderemos una gran parte de la eficacia de este metodo.</p>
+<p>&nbsp;</p>
+<h2><strong>C</strong><strong>iclo de desarrollo de TDD</strong></h2>
+<p>[caption id="attachment_127" align="alignright" width="240" caption="Fuente: Dojo@SP"]<a href="http://www.dojosp.org/?p=59"><img class="size-full wp-image-127" title="tdd-cycle" src="http://lordudun.es.mialias.net/wordpress/wp-content/uploads/2011/04/tdd-cycle.jpg" alt="tdd-cycle" width="240" height="203" /></a>[/caption]</p>
+<p>Elegir un requisito a desarrollar</p>
+<p>Crear la prueba o test</p>
+<p>Ejecutar los tests: <span style="color: #ff0000;">falla (<strong>ROJO</strong>)</span></p>
+<p>Crear codigo especifico para resolver el test</p>
+<p>Ejecutar de nuevo los tests: <span style="color: #00ff00;">pasa (<strong>VERDE</strong>)</span></p>
+<p>Refactorizar el codigo</p>
+<p>Ejecutar los tests: <span style="color: #00ff00;">pasa (<strong>VERDE</strong>)</span></p>
+<p>&nbsp;</p>
+<h2><strong>Ventajas de usar TDD</strong></h2>
+<p>La pregunta habitual cuando alguien te habla sobre TDD es ¿Porque es mejor hacer las pruebas antes que el codigo?</p>
+<p>Para responder a esta pregunta tenemos que pensar en la forma que se aplica TDD. Por un lado si se implementa y después se realizan las <strong>pruebas</strong> estas suelen estar <strong>condicionadas</strong> a lo implementado, con lo que es facil obviar pruebas o olvidar algunos casos de test.</p>
+<p>Por otro lado al realizar primero las pruebas se realiza un <strong>ejercicio previo de analisis</strong>, en profundidad, de los requisitos y de los diversos escenarios. Eliminando la mayor parte de variabilidad y encontrado aquellos aspectos mas importantes o no contemplados en los requisitos.</p>
+<p>El hecho que a demas solo se implemente el codigo necesario para resolver un caso de prueba concreto, pasar la prueba, hace que el <strong>codigo</strong> creado sea el <strong>minimo necesario</strong>, reduciendo redundancia y los tipicos bloques de codigo de "por si a caso" que habitualmente se convierten en <strong><a href="http://utopicainformatica.blogspot.com/2010/12/codigo-muerto.html">codigo muerto</a></strong>.</p>
+<p>Obviamente la obtención de un buen resultado aplicando TDD depende de realizar un conjunto de pruebas unitarias que cubran todos los casos descritos en los requisitos. Es cierto que <strong>habra que trabajar la tecnica para realizar buenos test</strong>, siendo aqui donde reside una de las mayores dificultades de este metodo.</p>
+<p>No obstante hay que remarcar que TDD no solo se basa en las pruebas. Una correcta aplicación de la <strong>etapa de refactoring</strong> hace que nuestro codigo sea mas <strong>legible, optimo y facil de mantener</strong>, factores que no siempre priman en nuestros proyectos. Hay que aplicar concienzudamente el paso de refactor, que es el que <strong>aportara un valor extra a nuestro codigo</strong>.</p>
+<p>Tambien que destacar que dado que el codigo evoluciona con el paso del tiempo el <strong>refactoring</strong> debe aplicarse, siempre que sea necesario, tanto al <strong>codigo implementado</strong> como a las <strong>pruebas unitarias</strong>, con el fin de mantenerlas actualizadas, añadiendo nuevos casos, cuando sea necesario, o completandolas al detectar fallos en el codigo.</p>
+<p>Os espero en el proximo post sobre TDD donde veremos algunos ejemplo que nos ayudaran a entenderlo mejor.</p>
+<p>PD: Os animo a comentar y plantear vuestras dudas en los comentarios del post.</p>

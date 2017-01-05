@@ -3,7 +3,7 @@
  * In airspace, it is called style.css
  * However, style.css now holds additional styles for this jekyll port. (Not written by ThemeFisher)
  * The original style.css is now called airspace.css
- * 
+ *
  */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
@@ -14,7 +14,8 @@
 	Common Css
 --*/
 body {
-  font-family: 'Open Sans', sans-serif;
+  /*todo blogfont-family: 'Open Sans', sans-serif;*/
+  font: 12px/22px 'Open Sans', "Helvetica", Arial;
   -webkit-font-smoothing: antialiased;
 }
 h1,
@@ -97,7 +98,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Slider Start
 --*/
 #slider {
-  background: url("../img/slider-bg.jpg") no-repeat;
+  background: url("../img/slider/macbeats.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 0%;
@@ -164,19 +165,18 @@ font header .navbar-default .navbar-nav li a:hover {
 --*/
 #service {
   text-align: center;
-  padding: 90px 0;
+  padding: 60px 0;
 }
 #service .service-item {
   padding-bottom: 30px;
+  padding-top: 40px;
 }
 #service .service-item i {
   font-size: 60px;
-  color: #4A4656;
 }
 #service .service-item h4 {
   padding-top: 20px;
   margin: 0;
-  color: #666;
 }
 #service .service-item p {
   color: #888;
@@ -184,6 +184,12 @@ font header .navbar-default .navbar-nav li a:hover {
   margin: 0;
   font-size: 14px;
   line-height: 1.8;
+}
+#service a {
+  color: #4A4656;
+}
+#service a:hover {
+  color: #31c68b;
 }
 /*--
 	call-to-action Start
@@ -226,6 +232,71 @@ font header .navbar-default .navbar-nav li a:hover {
   font-size: 15px;
   color: #333333;
   margin-top: 30px;
+}
+/*--
+	site-info-footer Start
+--*/
+#site-info-footer {
+  background: url("../img/background/geometric-mosaic-pattern-from-black-triangle-texture-abstract-vector-background-illustration_180563135.jpg") repeat top left scroll;
+  position: relative;
+  padding: 50px 0px;
+  text-align: left;
+  color: #fff;
+}
+#site-info-footer:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d192c;
+  opacity: 0.8;
+}
+#site-info-footer .container {
+  width: 970px;
+}
+#site-info-footer h6 {
+  padding-bottom: 10px;
+  line-height: 1.4em;
+  margin: 0 0 15px;
+  font-size: 1.25em;
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+  font-weight: 600;
+}
+#site-info-footer p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+#site-info-footer .textwidget {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777
+}
+#site-info-footer ul.social-footer {
+  margin-top: 20px;
+  font-size: 20px;
+  list-style: none;
+}
+#site-info-footer ul.social-footer li {
+  display: inline;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+#site-info-footer a {
+  color: #bbb;
+}
+#site-info-footer a:hover {
+  color: #31c68b;
+}
+#site-info-footer .category-widget > ul > li {
+    padding: 2px 0;
+    border-bottom: 1px solid #333;
+}
+#site-info-footer .category-widget > ul > li:first-child {
+    border-top: 1px solid #333;
 }
 /*--
 	Feature Start
@@ -358,7 +429,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Slider-work Start
 --*/
 #global-header {
-  background: url("../img/slider-bg.jpg") no-repeat;
+  background: url("../img/slider/macbeats.jpg") no-repeat;
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 107px;
@@ -776,8 +847,8 @@ font header .navbar-default .navbar-nav li a:hover {
 footer {
   background: #F5F5F5;
   text-align: center;
-  padding-top: 48px;
-  padding-bottom: 55px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 footer p {
   font-size: 13px;
