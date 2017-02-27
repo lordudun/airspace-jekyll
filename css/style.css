@@ -24,11 +24,24 @@
   border-bottom: 1px dotted #ddd;
 }
 
-.post-area a:link, .post-area a:visited {
-  font-size: 30px;
+.post-area h1 a {
   color: #333;
 }
 
+.post-area h1 a:hover {
+  color: #7bdeb7;
+}
+
+.post-area .post-date {
+  font-style: italic;
+}
+
+.post-area .read-more {
+  font-size: 15px;
+  font-style: italic;
+  margin: 20px 0 0;
+}
+
 .post-area a:hover {
-  color: #0D0017;
+  color: #7bdeb7;
 }

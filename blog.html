@@ -10,8 +10,8 @@ navigation_weight: 1
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <h1>Get the latest on what we're doing</h1>
-          <p>Catch up with us, anytime and anywhere</p>
+          <h1>posts</h1>
+          <p>about agile and software development</p>
         </div>
       </div>
     </div>
@@ -19,10 +19,67 @@ navigation_weight: 1
 </section>
 {% for post in site.posts %}
 <div class="post-area">
-  <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
-  <p class="post-date">{{ post.date | date_to_long_string }}</p>
+  <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+  <p class="post-date">
+    By {{ post.author.display_name }} on {{ post.date | date: "%B %-d, %Y" }}
+  </p>
   <p>
     {{ post.content | strip_html | truncatewords: 50 }}
   </p>
+  <p class="read-more">
+    <a href="{{ post.url | prepend: site.baseurl }}">continue reading →</a>
+  </p>
 </div>
 {% endfor %}
+<!-- Footer for site info -->
+<section id="site-info-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h6>Oriol del Barrio</h6>
+        <div class="textwidget">Software Developer and Agile Advocate. I enjoy writing code, and I develop every line of code like a craftsman is creating a new unique piece.
+        </br>
+          <ul class="social-footer">
+        		<li>
+        			<a href="https://profiles.google.com/orioldelb"><i class="fa fa-google-plus"></i></a>
+        		</li>
+        		<li>
+        			<a href="http://www.twitter.com/lordudun"><i class="fa fa-twitter"></i></a>
+        		</li>
+        		<li>
+        			<a href="http://es.linkedin.com/in/orioldelbarrio/en"><i class="fa fa-linkedin"></i></a>
+        		</li>
+            <li>
+        			<a href="https://www.instagram.com/orioldelb"><i class="fa fa-instagram"></i></a>
+        		</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 category-widget">
+        <h6>Categories</h6>
+        <ul>
+          {% assign tags_list = site.categories %}
+            {% if tags_list.first[0] == null %}
+              {% for tag in tags_list %}
+                <li><a href="#{{ tag }}">{{ tag | capitalize }}</a></li>
+              {% endfor %}
+            {% else %}
+              {% for tag in tags_list %}
+                <li><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }}</a></li>
+              {% endfor %}
+            {% endif %}
+          {% assign tags_list = nil %}
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="widget-title">License</h6>
+        <div class="textwidget">This site is under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License:
+          <p></p>
+          <p>
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en" rel="license"><img style="border-width: 0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Licencia de Creative Commons"></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

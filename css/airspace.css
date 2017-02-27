@@ -88,6 +88,9 @@ header .navbar-default .navbar-nav li a {
   padding: 10px 26px;
   font-size: 15px;
 }
+header .navbar-default .navbar-nav li a:hover {
+  color: #31c68b;
+}
 font header .navbar-default .navbar-nav li a:hover {
   color: #000;
 }
@@ -333,9 +336,12 @@ font header .navbar-default .navbar-nav li a:hover {
   margin-bottom: 20px;
 }
 #feature .btn-view-works {
-  background: #655E7A;
+  background: #31c68b;
   color: #fff;
   padding: 10px 20px;
+}
+#feature .btn-view-works:hover {
+  background: #7bdeb7;
 }
 /*--
 	content Start
